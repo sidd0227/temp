@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catalog [
+<!ELEMENT catalog (motorbike*)>
+<!ELEMENT motorbike (make, model, year, colour, engine, chassis_number, accessories)>
+<!ELEMENT make (#PCDATA)>
+<!ELEMENT model (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT colour (#PCDATA)>
+<!ELEMENT engine (engine_number, number_of_cylinders, type_of_fuel)>
+<!ELEMENT engine_number (#PCDATA)>
+<!ELEMENT number_of_cylinders (#PCDATA)>
+<!ELEMENT type_of_fuel (#PCDATA)>
+<!ELEMENT chassis_number (#PCDATA)>
+<!ELEMENT accessories EMPTY>
+<!ATTLIST accessories
+    disc_brake (yes | no) #REQUIRED
+    auto_start (yes | no) #REQUIRED
+    radio (yes | no) #REQUIRED>
+]>
+<catalog>
+	<motorbike>
+		<make>Suzuki</make>
+		<model>GSX-R1000</model>
+		<year>2024</year>
+		<colour>Black</colour>
+		<engine>
+			<engine_number>SUZK345678</engine_number>
+			<number_of_cylinders>4</number_of_cylinders>
+			<type_of_fuel>Petrol</type_of_fuel>
+		</engine>
+		<chassis_number>SUZK345678CH</chassis_number>
+		<accessories disc_brake="no" auto_start="no" radio="no"/>
+	</motorbike>
+	<motorbike>
+		<make>Kawasaki</make>
+		<model>Ninja ZX-10R</model>
+		<year>2023</year>
+		<colour>Green</colour>
+		<engine>
+			<engine_number>KAWZX101112</engine_number>
+			<number_of_cylinders>4</number_of_cylinders>
+			<type_of_fuel>Petrol</type_of_fuel>
+		</engine>
+		<chassis_number>KAWZX101112CH</chassis_number>
+		<accessories disc_brake="no" auto_start="no" radio="no"/>
+	</motorbike>
+</catalog>
